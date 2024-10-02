@@ -1,4 +1,5 @@
 import {Produto} from "@/core"
+import { IconShoppingCartPlus } from "@tabler/icons-react"
 import Image from "next/image"
 import Link from "next/link"
 
@@ -34,8 +35,11 @@ export default function ProdutoItem(props : ProdutoItemProps){
             <span className="text-sm text-gray-400 line-through" >de {props.produto.precoBase}</span>
             <span className="text-xl font-semibold text-emerald-400" >por {props.produto.precoPromocional}</span>
         </div>
-        <button className="flex justify-center items-center h-8
+        <button className="flex justify-center items-center h-8 gap-2
          bg-violet-700 hover:border-2 border-emerald-500 rounded-full">
+
+            <IconShoppingCartPlus size={20}/>
+
             <span>
                 Adicionar
             </span>
