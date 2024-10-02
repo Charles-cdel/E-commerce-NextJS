@@ -1,5 +1,6 @@
-import { Produto } from "@/app/core"
+import {Produto} from "@/core"
 import Link from "next/link"
+
 
 export interface ProdutoItemProps{
     produto : Produto
