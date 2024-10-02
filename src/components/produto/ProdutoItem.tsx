@@ -1,4 +1,5 @@
 import {Produto} from "@/core"
+import Image from "next/image"
 import Link from "next/link"
 
 
@@ -9,9 +10,18 @@ export interface ProdutoItemProps{
 export default function ProdutoItem(props : ProdutoItemProps){
     const {produto} = props
 
-   return <Link href={`/produto/${produto.id}`} className="flex flex-col bg-violet-dark border border-white/10 "
+   return <Link href={`/produto/${produto.id}`} className="flex flex-col bg-violet-dark border border-white/10 
+   rounded-xl relative max-w-[350px]" 
    
-   >{props.produto.nome}
+   >
+    <div>
+        <Image
+            src={produto.imagem}
+            alt="Imagem do Produto" 
+            fill          
+        />
+    </div>
+    {props.produto.nome}
    </Link>
     
 }
