@@ -29,10 +29,17 @@ export default function ProdutoItem(props : ProdutoItemProps){
         <span className="text-sm border-b border-dashed self-start ">
             {produto.especificacoes.destaque}
         </span>
+        <div className="flex-1"></div>
         <div className="flex flex-col">
             <span className="text-sm text-gray-400 line-through" >de {props.produto.precoBase}</span>
             <span className="text-xl font-semibold text-emerald-400" >por {props.produto.precoPromocional}</span>
         </div>
+        <button className="flex justify-center items-center h-8
+         bg-violet-700 hover:border-2 border-emerald-500 rounded-full">
+            <span>
+                Adicionar
+            </span>
+        </button>
     </div>
    </Link>
     
