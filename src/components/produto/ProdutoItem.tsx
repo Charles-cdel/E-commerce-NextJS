@@ -1,3 +1,4 @@
+'use client'
 import {Produto} from "@/core"
 import { IconShoppingCartPlus } from "@tabler/icons-react"
 import Image from "next/image"
@@ -36,7 +37,13 @@ export default function ProdutoItem(props : ProdutoItemProps){
             <span className="text-xl font-semibold text-emerald-400" >por {props.produto.precoPromocional}</span>
         </div>
         <button className="flex justify-center items-center h-8 gap-2
-         bg-violet-700 hover:border-2 border-emerald-500 rounded-full">
+         bg-violet-700 hover:border-2 border-emerald-500 rounded-full"
+         
+         onClick={(e: any) => {
+            e.preventDefault()
+            console.log('Adicionar ao carrinho')
+         }}
+         >
 
             <IconShoppingCartPlus size={20}/>
 
