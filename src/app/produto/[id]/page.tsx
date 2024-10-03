@@ -1,3 +1,5 @@
+'use client'
+
 import useProdutos from "@/data/hooks/useProdutos"
 
 
