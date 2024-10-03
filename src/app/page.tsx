@@ -1,7 +1,10 @@
+import useProdutos from "@/data/hooks/useProdutos";
 import ProdutoItem from "../components/produto/ProdutoItem";
-import { produtos } from "../core";
+
 
 export default function Inicio() {
+
+  const {produtos} = useProdutos()
   return (
     <div className="grid grid-cols-4 gap-5 container">
 
